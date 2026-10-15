@@ -1,0 +1,18 @@
+appId: com.thadeu.editorvideo
+productName: EditorVideo
+directories:
+  output: release
+  buildResources: build
+files:
+  - out/**/*
+  - package.json
+extraResources:
+  - from: resources/bin
+    to: bin
+asar: true
+win:
+  icon: build/icon.png
+  # pasta portátil: EditorVideo.exe roda direto, sem instalar e sem descompactar a cada abertura
+  target:
+    - dir
+npmRebuild: false

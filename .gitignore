@@ -1,0 +1,9 @@
+node_modules/
+out/
+release/
+# dados locais do modo dev (cache de mídia, modelos, configurações)
+.dados/
+# ffmpeg/ffprobe: baixados por `npm run fetch-binaries`
+resources/bin/
+.tmp-ffmpeg/
+*.log

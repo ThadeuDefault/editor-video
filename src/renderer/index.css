@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #0f1115;
+  --color-panel: #171a21;
+  --color-panel2: #1e222b;
+  --color-line: #2a2f3a;
+  --color-accent: #7c5cff;
+  --color-accent2: #a48bff;
+  --color-muted: #8b93a7;
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--color-bg);
+  color: #e6e8ee;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  overflow: hidden;
+  user-select: none;
+}
+
+input,
+textarea,
+select {
+  user-select: text;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2f3542;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.field {
+  background: #0f1115;
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: #e6e8ee;
+  outline: none;
+  min-width: 0;
+}
+.field:focus {
+  border-color: var(--color-accent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  background: var(--color-panel2);
+  border: 1px solid var(--color-line);
+  color: #e6e8ee;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s;
+}
+.btn:hover {
+  background: #272c37;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.btn-primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: #6a48ff;
+}
+.btn-sm {
+  padding: 3px 8px;
+  font-size: 12px;
+}
+.btn-icon {
+  padding: 4px 7px;
+}
+.tab {
+  padding: 8px 10px;
+  color: var(--color-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.tab.active {
+  color: white;
+  border-bottom-color: var(--color-accent);
+}
+input[type='range'] {
+  accent-color: var(--color-accent);
+}
+input[type='checkbox'] {
+  accent-color: var(--color-accent);
+}
